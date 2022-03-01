@@ -1,7 +1,7 @@
-package org.jetbrains.plugins.template.services
+package com.github.mortias.apimerge.services
 
 import com.intellij.openapi.project.Project
-import org.jetbrains.plugins.template.MyBundle
+import com.github.mortias.apimerge.MyBundle
 
 class MyProjectService(project: Project) {
 
