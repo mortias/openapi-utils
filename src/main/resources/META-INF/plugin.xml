@@ -7,25 +7,9 @@
     <!-- Text to display as name on Preferences/Settings | Plugin page -->
     <name>OpenApi Utils</name>
 
-    <vendor>Mortias</vendor>
+    <vendor>Mortier Andries</vendor>
 
     <depends>com.intellij.modules.platform</depends>
-
-    <!-- Text to display as description on Preferences/Settings | Plugin page -->
-    <description>
-        <![CDATA[
-      Handy plugin to facilitate working with OAS2/0AS3 specifications.<br>
-      - Merge back API's in one Json or Yaml file.<br>
-      - Flip the API structure to Json or Yaml<br>
-    ]]>
-    </description>
-    <change-notes>
-        <![CDATA[
-      <ul>
-        <li><b>0.0.1</b> First release of the plugin.</li>
-      </ul>
-    ]]>
-    </change-notes>
 
     <!-- Declare the default resource location for localizing menu strings -->
     <resource-bundle>messages.BasicActionsBundle</resource-bundle>
