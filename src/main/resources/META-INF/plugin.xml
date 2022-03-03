@@ -1,18 +1,55 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.mortias.apimerge</id>
-    <name>api-merge</name>
-    <vendor>mortias</vendor>
+
+    <!-- Unique id for this plugin. Must stay constant for the life of the plugin. -->
+    <id>com.mitc.intellij.openapi.utils</id>
+
+    <!-- Text to display as name on Preferences/Settings | Plugin page -->
+    <name>OpenApi Utils</name>
+
+    <vendor>Mortias</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.mortias.apimerge.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.mortias.apimerge.services.MyProjectService"/>
-    </extensions>
+    <!-- Text to display as description on Preferences/Settings | Plugin page -->
+    <description>
+        <![CDATA[
+      Handy plugin to facilitate working with OAS2/0AS3 specifications.<br>
+      - Merge back API's in one Json or Yaml file.<br>
+      - Flip the API structure to Json or Yaml<br>
+    ]]>
+    </description>
+    <change-notes>
+        <![CDATA[
+      <ul>
+        <li><b>0.0.1</b> First release of the plugin.</li>
+      </ul>
+    ]]>
+    </change-notes>
 
-    <applicationListeners>
-        <listener class="com.github.mortias.apimerge.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+    <!-- Declare the default resource location for localizing menu strings -->
+    <resource-bundle>messages.BasicActionsBundle</resource-bundle>
+
+    <actions>
+
+        <action id="com.mitc.intellij.openapi.utils.action.MergeActionYaml" class="com.mitc.intellij.openapi.utils.action.MergeActionYaml"
+                text="Merge API" icon="AllIcons.Diff.ApplyNotConflicts">
+            <add-to-group group-id="CutCopyPasteGroup" anchor="last"/>
+        </action>
+        <action id="com.mitc.intellij.openapi.utils.action.FlipActionYaml" class="com.mitc.intellij.openapi.utils.action.FlipActionYaml"
+                text="Flip to JSON" icon="AllIcons.Actions.BuildLoadChanges">
+            <add-to-group group-id="CutCopyPasteGroup" anchor="last"/>
+        </action>
+
+        <action id="com.mitc.intellij.openapi.utils.action.MergeActionJson" class="com.mitc.intellij.openapi.utils.action.MergeActionJson"
+                text="Merge API" icon="AllIcons.Diff.ApplyNotConflicts">
+            <add-to-group group-id="CutCopyPasteGroup" anchor="last"/>
+        </action>
+        <action id="com.mitc.intellij.openapi.utils.action.FlipActionJson" class="com.mitc.intellij.openapi.utils.action.FlipActionJson"
+                text="Flip to YAML" icon="AllIcons.Actions.BuildLoadChanges">
+            <add-to-group group-id="CutCopyPasteGroup" anchor="last"/>
+        </action>
+
+    </actions>
+
 </idea-plugin>

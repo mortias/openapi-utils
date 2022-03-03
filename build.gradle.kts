@@ -16,12 +16,20 @@ plugins {
     id("org.jetbrains.qodana") version "0.1.13"
 }
 
-group = properties("pluginGroup")
-version = properties("pluginVersion")
+group = properties("com.mitc.intellij.openapi.tools")
+version = properties("0.0.1")
 
 // Configure project's dependencies
 repositories {
     mavenCentral()
+}
+
+dependencies {
+    implementation("io.swagger.core.v3:swagger-models:2.1.13")
+    implementation("io.swagger.parser.v3:swagger-parser:2.0.30")
+    implementation("io.swagger:swagger-models:1.6.5")
+    implementation("ch.qos.logback:logback-classic:1.2.10")
+    runtimeOnly("org.projectlombok:lombok:1.18.22")
 }
 
 // Configure Gradle IntelliJ Plugin - read more: https://github.com/JetBrains/gradle-intellij-plugin

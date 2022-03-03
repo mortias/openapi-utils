@@ -1,1 +1,1 @@
-rootProject.name = "api-merge"
+rootProject.name = "openapi-utils"

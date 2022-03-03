@@ -1,7 +1,7 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# api-merge Changelog
+# openapi-utils Changelog
 
 ## [Unreleased]
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+- Initial first version created with Merge and Flip
