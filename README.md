@@ -20,6 +20,9 @@ Handy plugin to facilitate working with OAS2/3 specifications.<br>
 - Flip to convert the API structure between Yaml or Json format.<br>
 <!-- Plugin description end -->
 
+## UI Integration
+![UI Integration](preview.png)
+
 ## Installation
 
 - Using IDE built-in plugin system:
