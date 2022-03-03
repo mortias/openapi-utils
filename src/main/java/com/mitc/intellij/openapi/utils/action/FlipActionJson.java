@@ -50,7 +50,7 @@ public class FlipActionJson extends AnAction {
                     VirtualFileManager.getInstance().syncRefresh();
                 }
             } catch (Exception ex) {
-                log.error("Exception while flipping.. , {}" + ex.getMessage());
+                log.info("Issue found while flipping.. " + ex.getMessage());
             }
 
         }

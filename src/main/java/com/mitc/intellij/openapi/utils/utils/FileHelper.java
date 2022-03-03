@@ -27,7 +27,7 @@ public class FileHelper {
             return stack.containsKey("swagger") ? OAS2 :
                     stack.containsKey("openapi") ? OAS3 : UNDEFINED;
         } catch (Exception ex) {
-            log.error("Exception defining Spec, {}" + ex.getMessage());
+            log.info("Exception defining specification, " + ex.getMessage());
             return UNDEFINED;
         }
     }

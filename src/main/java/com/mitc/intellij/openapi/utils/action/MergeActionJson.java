@@ -60,13 +60,13 @@ public class MergeActionJson extends AnAction {
                             VirtualFileManager.getInstance().syncRefresh();
                             break;
                         default:
-                            log.warn("Can't identify the correct specification..");
+                            log.info("Can't identify the correct specification..");
                             break;
                     }
                 }
 
             } catch (Exception ex) {
-                log.error("Exception defining Context, {}" + ex.getMessage());
+                log.info("Issue found while merging.. " + ex.getMessage());
             }
         }
 
