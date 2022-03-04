@@ -7,7 +7,7 @@
     <!-- Text to display as name on Preferences/Settings | Plugin page -->
     <name>OpenApi Utils</name>
 
-    <vendor>Mortier Andries</vendor>
+    <vendor>MITC</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 

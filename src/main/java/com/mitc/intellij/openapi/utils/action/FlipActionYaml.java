@@ -29,10 +29,11 @@ public class FlipActionYaml extends AnAction {
 
     @Override
     public void update(AnActionEvent e) {
+        boolean enabled = false;
         VirtualFile vFile = CommonDataKeys.VIRTUAL_FILE.getData(e.getDataContext());
-        e.getPresentation().setEnabledAndVisible(
-                equalsOneOf(Objects.requireNonNull(vFile).getFileType()
-                        .getName().toLowerCase(Locale.ROOT), "yaml", "yml"));
+        if (!isNull(vFile))
+            enabled = equalsOneOf(vFile.getFileType().getName().toLowerCase(Locale.ROOT), "yaml", "yml");
+        e.getPresentation().setEnabledAndVisible(enabled);
     }
 
     @Override
