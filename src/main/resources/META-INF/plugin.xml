@@ -14,6 +14,16 @@
     <!-- Declare the default resource location for localizing menu strings -->
     <resource-bundle>messages.BasicActionsBundle</resource-bundle>
 
+    <description><![CDATA[
+      Handy plugin to facilitate working with OAS2/3 specifications.<br>
+      - Merge API's back into one Json or Yaml file.<br>
+      - Flip to convert the API structure between Yaml or Json format.<br>
+      After the plugin install, you can right click on your yaml or json file to merge or flip.
+     ]]>
+    </description>
+
+    <change-notes>Initial release of the plugin.</change-notes>
+
     <actions>
 
         <action id="com.mitc.intellij.openapi.utils.action.MergeActionYaml" class="com.mitc.intellij.openapi.utils.action.MergeActionYaml"
